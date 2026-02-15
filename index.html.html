@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Finanzas Pro">
+  <meta name="theme-color" content="#2563eb">
+  
+  <!-- App Icons para iPhone -->
+  <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiBmaWxsPSJ1cmwoI2dyYWQpIiByeD0iNDAiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDE9IjAiIHkxPSIwIiB4Mj0iMTgwIiB5Mj0iMTgwIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzI1NjNlYiIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxZTQwYWYiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8dGV4dCB4PSI5MCIgeT0iMTEwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iODAiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7wn5K8PC90ZXh0Pgo8L3N2Zz4=">
+  
+  <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkZpbmFuemFzIFBybyIsCiAgInNob3J0X25hbWUiOiAiRmluYW56YXMiLAogICJkZXNjcmlwdGlvbiI6ICJHZXN0aW9uYSB0dXMgZmluYW56YXMgcGVyc29uYWxlcyBkZSBmb3JtYSBzZWd1cmEiLAogICJzdGFydF91cmwiOiAiLiIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiI2Y4ZmFmYyIsCiAgInRoZW1lX2NvbG9yIjogIiMyNTYzZWIiLAogICJpY29ucyI6IFt7CiAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjNhV1IwYUQwaU1UZ3dJaUJvWldsbmFIUTlJakU0TUNJZ2RtbGxkMEp2ZUQwaU1DQXdJREU0TUNBME9EQWlJR1pwYkd3OUltNXZibVVpSUhodGJHNXpQU0pvZEhSd09pOHZkM2QzTG5jekxtOXlaeTh5TURBd0wzTjJaeUkrQ2p4eVpXTjBJSGRwWkhSb1BTSXhPREFpSUdobGFXZG9kRDBpTkRnd0lpQm1hV3hzUFNKMWNtd29JMmR5WVdRcElpQnllRDBpTkRBaUx6NEtQR1JsWm5NK0NqeHNhVzVsWVhKSGNtRmthV1Z1ZENCcFpEMGlaM0poWkNJZ2VERTlJakFpSUhreE1UMGlNQ0lnZURJOUlqRTRNQ0lnZVRJOUlqUTRNQ0krQ2p4emRHOXdJRzltWm5ObGREMGlNQ1VpSUhOMGVXeGxQU0p6ZEc5d0xXTnZiRzl5T2lNeU5UWXpaV0lpTHo0S1BITjBiM0FnYjJabWMyVjBQU0l4TURBbElpQnpkSGxzWlQwaWMzUnZjQzFqYjJ4dmNqb2pNV1UwTUdGbUlpOCtDand2YkdsdVpXRnlSM0poWkdsbGJuUStDand2WkdWbWN6NEtQSFJsZUhRZ2VEMGlPVEFpSUhrOUlqRXhNQ0lnWm05dWRDMW1ZVzFwYkhrOUlrRnlhV0ZzSWlCbWIyNTBMWE5wZW1VOUlqZ3dJaUJtYVd4c1BTSjNhR2wwWlNJZ2RHVjRkQzFoYm1Ob2IzSTlJbTFwWkdSc1pTSStNSEEvTDNSbGVIUStDand2YzNabkp3PT0iLAogICAgInNpemVzIjogIjE4MHgxODAiLAogICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIKICB9XQp9">
+  
+  <title>Finanzas Pro - Gestor Financiero Personal</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --secondary: #10b981;
+      --accent: #f59e0b;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --success: #10b981;
+      --bg: #f8fafc;
+      --bg-secondary: #f1f5f9;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --text-secondary: #64748b;
+      --border: #e2e8f0;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    input, textarea {
+      -webkit-user-select: text;
+      user-select: text;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overscroll-behavior: none;
+    }
+
+    .install-prompt {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 1.5rem;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+      z-index: 10000;
+      animation: slideUpPrompt 0.4s ease;
+    }
+
+    @keyframes slideUpPrompt {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+
+    .install-prompt-content {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .install-prompt-icon {
+      font-size: 2.5rem;
+      flex-shrink: 0;
+    }
+
+    .install-prompt-text {
+      flex: 1;
+    }
+
+    .install-prompt-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .install-prompt-subtitle {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .install-prompt-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .install-btn {
+      background: white;
+      color: var(--primary);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .dismiss-btn {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: none;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .login-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .login-card {
+      background: white;
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      animation: slideUp 0.4s ease;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-header { text-align: center; margin-bottom: 2rem; }
+    .login-icon { font-size: 4rem; margin-bottom: 1rem; }
+    .login-title { font-size: 1.75rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+    .login-subtitle { color: var(--text-secondary); font-size: 0.95rem; }
+
+    .form-group { margin-bottom: 1.5rem; }
+    .form-label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text); }
+
+    .form-input {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.2s;
+      background: var(--bg);
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: white;
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+    }
+
+    .password-toggle { position: relative; }
+    .password-toggle-btn {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      padding: 0.5rem;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-primary:active { transform: scale(0.98); }
+    .btn-secondary { background: var(--bg-secondary); color: var(--text); }
+    .btn-link { background: none; color: var(--primary); padding: 0.5rem; }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 1.5rem 0;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .divider span { padding: 0 1rem; }
+
+    .verification-code {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+
+    .verification-input {
+      width: 3.5rem;
+      height: 3.5rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg);
+    }
+
+    .verification-input:focus {
+      border-color: var(--primary);
+      background: white;
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+      outline: none;
+    }
+
+    .alert {
+      padding: 0.875rem 1rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .alert-success { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
+    .alert-error { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+    .alert-info { background: #dbeafe; color: #1e40af; border: 1px solid #93c5fd; }
+
+    .app-container { 
+      min-height: 100vh; 
+      background: var(--bg); 
+      padding-bottom: 80px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .app-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    .header-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+    .app-title { font-size: 1.25rem; font-weight: 700; }
+
+    .logout-btn {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .main-content { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+
+    .tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      background: white;
+      padding: 0.5rem;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    .tab {
+      padding: 0.75rem 0.5rem;
+      text-align: center;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+    }
+
+    .tab.active {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+    }
+
+    .section {
+      background: white;
+      border-radius: 16px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card {
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-title { font-weight: 600; font-size: 0.95rem; color: var(--text); }
+    .card-value { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-top: 0.5rem; }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .badge-success { background: #d1fae5; color: #065f46; }
+    .badge-warning { background: #fef3c7; color: #92400e; }
+    .badge-danger { background: #fee2e2; color: #991b1b; }
+
+    .item-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+    .item {
+      background: white;
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1px 3px var(--shadow);
+    }
+
+    .item-info { flex: 1; }
+    .item-name { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.25rem; }
+    .item-meta { font-size: 0.8rem; color: var(--text-secondary); }
+    .item-amount { font-size: 1.1rem; font-weight: 700; color: var(--primary); }
+
+    .fab {
+      position: fixed;
+      bottom: 90px;
+      right: 1rem;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+      cursor: pointer;
+      z-index: 90;
+    }
+
+    .fab:active { transform: scale(0.95); }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 0.5rem;
+      padding-bottom: env(safe-area-inset-bottom);
+      z-index: 100;
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.5rem;
+      border: none;
+      background: none;
+      color: var(--text-secondary);
+      font-size: 0.7rem;
+      cursor: pointer;
+    }
+
+    .nav-item.active { color: var(--primary); }
+    .nav-icon { font-size: 1.5rem; }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: flex-end;
+      z-index: 1000;
+      animation: fadeIn 0.2s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-content {
+      background: white;
+      border-radius: 24px 24px 0 0;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 1.5rem;
+      padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+      animation: slideUpModal 0.3s ease;
+    }
+
+    @keyframes slideUpModal {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+    .modal-title { font-size: 1.25rem; font-weight: 700; }
+
+    .close-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: none;
+      background: var(--bg-secondary);
+      font-size: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .empty-state { text-align: center; padding: 3rem 1rem; color: var(--text-secondary); }
+    .empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .summary-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+    }
+
+    .summary-label {
+      font-size: 0.75rem;
+      opacity: 0.9;
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .summary-value { font-size: 1.5rem; font-weight: 700; }
+    .summary-subtitle { font-size: 0.75rem; opacity: 0.8; margin-top: 0.25rem; }
+
+    .btn-small { padding: 0.5rem 1rem; font-size: 0.85rem; width: auto; }
+    .btn-icon { padding: 0.5rem; width: auto; min-width: 40px; }
+
+    .spinner {
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-top: 3px solid white;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+
+    .checkbox-label input { width: auto; }
+
+    .password-strength { margin-top: 0.5rem; font-size: 0.85rem; }
+
+    .strength-bar {
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 0.25rem;
+    }
+
+    .strength-fill { height: 100%; transition: all 0.3s; }
+
+    .resend-code {
+      text-align: center;
+      margin-top: 1rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .resend-code button {
+      color: var(--primary);
+      font-weight: 600;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      .tabs { grid-template-columns: repeat(8, 1fr); }
+      .tab { font-size: 0.85rem; }
+      .summary-grid { grid-template-columns: repeat(3, 1fr); }
+      .bottom-nav { display: none; }
+      .fab { bottom: 2rem; }
+      .app-container { padding-bottom: 2rem; }
+      .modal { align-items: center; justify-content: center; }
+      .modal-content { border-radius: 24px; max-width: 600px; max-height: 90vh; }
+    }
+
+    @supports (padding: env(safe-area-inset-bottom)) {
+      .app-container {
+        padding-bottom: calc(80px + env(safe-area-inset-bottom));
+      }
+      
+      .bottom-nav {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useRef } = React;
+
+    // PWA Installation
+    let deferredPrompt;
+    const [showInstallPrompt, setShowInstallPrompt] = useState(false);
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      setShowInstallPrompt(true);
+    });
+
+    // Utilidades de cifrado
+    const encryptData = (data, password) => {
+      return CryptoJS.AES.encrypt(JSON.stringify(data), password).toString();
+    };
+
+    const decryptData = (encryptedData, password) => {
+      try {
+        const bytes = CryptoJS.AES.decrypt(encryptedData, password);
+        const decrypted = bytes.toString(CryptoJS.enc.Utf8);
+        return JSON.parse(decrypted);
+      } catch (e) {
+        return null;
+      }
+    };
+
+    const generateVerificationCode = () => {
+      return Math.floor(1000 + Math.random() * 9000).toString();
+    };
+
+    const sendVerificationEmail = (email, code) => {
+      console.log(`📧 Email enviado a ${email}: Tu código de verificación es ${code}`);
+      alert(`📧 Código de verificación enviado a ${email}: ${code}\n\n(En producción, esto se enviaría por email real)`);
+      return true;
+    };
+
+    const checkPasswordStrength = (password) => {
+      let strength = 0;
+      if (password.length >= 8) strength++;
+      if (password.length >= 12) strength++;
+      if (/[a-z]/.test(password) && /[A-Z]/.test(password)) strength++;
+      if (/\d/.test(password)) strength++;
+      if (/[^a-zA-Z0-9]/.test(password)) strength++;
+      return strength;
+    };
+
+    const formatNumber = (num) => {
+      if (!num && num !== 0) return '';
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    };
+
+    const parseFormattedNumber = (str) => {
+      if (!str) return 0;
+      return parseFloat(str.toString().replace(/\./g, '').replace(',', '.')) || 0;
+    };
+
+    const InstallPrompt = ({ onInstall, onDismiss }) => {
+      return (
+        <div className="install-prompt">
+          <div className="install-prompt-content">
+            <div className="install-prompt-icon">📱</div>
+            <div className="install-prompt-text">
+              <div className="install-prompt-title">¡Instala Finanzas Pro!</div>
+              <div className="install-prompt-subtitle">Acceso rápido desde tu pantalla de inicio</div>
+            </div>
+            <div className="install-prompt-actions">
+              <button className="install-btn" onClick={onInstall}>Instalar</button>
+              <button className="dismiss-btn" onClick={onDismiss}>Ahora no</button>
+            </div>
+          </div>
+        </div>
+      );
+    };
+
+    const FinanceApp = () => {
+      const [isAuthenticated, setIsAuthenticated] = useState(false);
+      const [showInstallBanner, setShowInstallBanner] = useState(false);
+      const [authScreen, setAuthScreen] = useState('login');
+      const [email, setEmail] = useState('');
+      const [password, setPassword] = useState('');
+      const [confirmPassword, setConfirmPassword] = useState('');
+      const [showPassword, setShowPassword] = useState(false);
+      const [verificationCode, setVerificationCode] = useState(['', '', '', '']);
+      const [generatedCode, setGeneratedCode] = useState('');
+      const [twoFactorEnabled, setTwoFactorEnabled] = useState(true);
+      const [loading, setLoading] = useState(false);
+      const [error, setError] = useState('');
+      const [success, setSuccess] = useState('');
+      const [currentUser, setCurrentUser] = useState(null);
+      const [activeTab, setActiveTab] = useState('resumen');
+      const [showModal, setShowModal] = useState(false);
+      const [modalType, setModalType] = useState('');
+      const [editingItem, setEditingItem] = useState(null);
+
+      const [profile, setProfile] = useState({ age: '', children: '', riskAversion: 'moderate' });
+      const [incomes, setIncomes] = useState([]);
+      const [expenses, setExpenses] = useState([]);
+      const [debts, setDebts] = useState([]);
+      const [liquidAccounts, setLiquidAccounts] = useState([]);
+      const [investments, setInvestments] = useState([]);
+      const [credits, setCredits] = useState({ shortTerm: '', mediumTerm: '', longTerm: '' });
+
+      const [newIncome, setNewIncome] = useState({ name: '', type: 'salary', amount: '' });
+      const [newExpense, setNewExpense] = useState({ name: '', category: 'housing', amount: '' });
+      const [newDebt, setNewDebt] = useState({ name: '', type: 'mortgage', amount: '', tae: '' });
+      const [newLiquidAccount, setNewLiquidAccount] = useState({ name: '', bank: '', amount: '', interest: '', isEmergency: false });
+      const [newInvestment, setNewInvestment] = useState({ name: '', category: 'fondosIndexados', amount: '', expectedReturn: '', notes: '' });
+
+      const verificationInputs = useRef([]);
+
+      useEffect(() => {
+        // Check if already installed
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+          // Already installed as PWA
+          console.log('App is running as PWA');
+        } else {
+          // Show install prompt after 3 seconds
+          setTimeout(() => {
+            if (deferredPrompt) {
+              setShowInstallBanner(true);
+            }
+          }, 3000);
+        }
+      }, []);
+
+      const handleInstall = async () => {
+        if (!deferredPrompt) {
+          // For iOS - show instructions
+          alert('Para instalar en iPhone:\n\n1. Toca el botón Compartir (cuadrado con flecha)\n2. Desplázate y toca "Añadir a pantalla de inicio"\n3. Toca "Añadir"\n\n¡Listo! Tendrás la app en tu iPhone 📱');
+          return;
+        }
+
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        
+        if (outcome === 'accepted') {
+          console.log('User accepted the install prompt');
+        }
+        
+        deferredPrompt = null;
+        setShowInstallBanner(false);
+      };
+
+      const handleDismissInstall = () => {
+        setShowInstallBanner(false);
+        localStorage.setItem('installPromptDismissed', 'true');
+      };
+
+      useEffect(() => {
+        const savedSession = localStorage.getItem('financeAppSession');
+        if (savedSession) {
+          try {
+            const session = JSON.parse(savedSession);
+            if (session.email && session.sessionToken) {
+              setCurrentUser(session);
+              setEmail(session.email);
+              loadUserData(session.email, session.sessionToken);
+            }
+          } catch (e) {
+            console.error('Error loading session:', e);
+          }
+        }
+      }, []);
+
+      useEffect(() => {
+        if (isAuthenticated && currentUser) {
+          saveUserData();
+        }
+      }, [profile, incomes, expenses, debts, liquidAccounts, investments, credits]);
+
+      const loadUserData = (userEmail, sessionToken) => {
+        const encryptedData = localStorage.getItem(`financeData_${userEmail}`);
+        if (encryptedData) {
+          const data = decryptData(encryptedData, sessionToken);
+          if (data) {
+            if (data.profile) setProfile(data.profile);
+            if (data.incomes) setIncomes(data.incomes);
+            if (data.expenses) setExpenses(data.expenses);
+            if (data.debts) setDebts(data.debts);
+            if (data.liquidAccounts) setLiquidAccounts(data.liquidAccounts);
+            if (data.investments) setInvestments(data.investments);
+            if (data.credits) setCredits(data.credits);
+            setIsAuthenticated(true);
+          }
+        } else {
+          setIsAuthenticated(true);
+        }
+      };
+
+      const saveUserData = () => {
+        if (!currentUser) return;
+        const data = { profile, incomes, expenses, debts, liquidAccounts, investments, credits };
+        const encrypted = encryptData(data, currentUser.sessionToken);
+        localStorage.setItem(`financeData_${currentUser.email}`, encrypted);
+      };
+
+      const handleRegister = () => {
+        setError('');
+        setSuccess('');
+
+        if (!email || !password || !confirmPassword) {
+          setError('Por favor completa todos los campos');
+          return;
+        }
+
+        if (!email.includes('@') || !email.includes('.')) {
+          setError('Email inválido');
+          return;
+        }
+
+        const strength = checkPasswordStrength(password);
+        if (strength < 3) {
+          setError('La contraseña debe tener al menos 8 caracteres, mayúsculas, minúsculas y números');
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          setError('Las contraseñas no coinciden');
+          return;
+        }
+
+        const existingUser = localStorage.getItem(`user_${email}`);
+        if (existingUser) {
+          setError('Este email ya está registrado');
+          return;
+        }
+
+        if (twoFactorEnabled) {
+          const code = generateVerificationCode();
+          setGeneratedCode(code);
+          sendVerificationEmail(email, code);
+          setAuthScreen('verify');
+        } else {
+          completeRegistration();
+        }
+      };
+
+      const completeRegistration = () => {
+        const hashedPassword = CryptoJS.SHA256(password).toString();
+        const userData = {
+          email: email,
+          password: hashedPassword,
+          twoFactorEnabled: twoFactorEnabled,
+          createdAt: new Date().toISOString()
+        };
+
+        localStorage.setItem(`user_${email}`, JSON.stringify(userData));
+        setSuccess('¡Registro completado! Ahora puedes iniciar sesión');
+        setTimeout(() => {
+          setAuthScreen('login');
+          setPassword('');
+          setConfirmPassword('');
+        }, 2000);
+      };
+
+      const handleVerification = () => {
+        const enteredCode = verificationCode.join('');
+        if (enteredCode === generatedCode) {
+          completeRegistration();
+        } else {
+          setError('Código incorrecto. Por favor verifica e intenta de nuevo');
+        }
+      };
+
+      const handleLogin = () => {
+        setError('');
+        setLoading(true);
+
+        setTimeout(() => {
+          const userData = localStorage.getItem(`user_${email}`);
+          
+          if (!userData) {
+            setError('Usuario no encontrado');
+            setLoading(false);
+            return;
+          }
+
+          const user = JSON.parse(userData);
+          const hashedPassword = CryptoJS.SHA256(password).toString();
+
+          if (user.password !== hashedPassword) {
+            setError('Contraseña incorrecta');
+            setLoading(false);
+            return;
+          }
+
+          if (user.twoFactorEnabled) {
+            const code = generateVerificationCode();
+            setGeneratedCode(code);
+            sendVerificationEmail(email, code);
+            setAuthScreen('verify-login');
+            setLoading(false);
+          } else {
+            completeLogin();
+          }
+        }, 500);
+      };
+
+      const completeLogin = () => {
+        const sessionToken = CryptoJS.SHA256(email + Date.now()).toString();
+        const session = {
+          email: email,
+          sessionToken: sessionToken,
+          loginTime: new Date().toISOString()
+        };
+
+        localStorage.setItem('financeAppSession', JSON.stringify(session));
+        setCurrentUser(session);
+        loadUserData(email, sessionToken);
+        setSuccess('¡Bienvenido!');
+        setLoading(false);
+      };
+
+      const handleLogout = () => {
+        if (confirm('¿Seguro que quieres cerrar sesión?')) {
+          localStorage.removeItem('financeAppSession');
+          setIsAuthenticated(false);
+          setCurrentUser(null);
+          setEmail('');
+          setPassword('');
+          setAuthScreen('login');
+        }
+      };
+
+      const handleVerificationInput = (index, value) => {
+        if (value.length > 1) value = value[0];
+        if (!/^\d*$/.test(value)) return;
+
+        const newCode = [...verificationCode];
+        newCode[index] = value;
+        setVerificationCode(newCode);
+
+        if (value && index < 3) {
+          verificationInputs.current[index + 1]?.focus();
+        }
+      };
+
+      const handleVerificationKeyDown = (index, e) => {
+        if (e.key === 'Backspace' && !verificationCode[index] && index > 0) {
+          verificationInputs.current[index - 1]?.focus();
+        }
+      };
+
+      const resendCode = () => {
+        const code = generateVerificationCode();
+        setGeneratedCode(code);
+        sendVerificationEmail(email, code);
+        setSuccess('Código reenviado');
+      };
+
+      const categories = {
+        fondosIndexados: 'Fondos Indexados',
+        accionesETF: 'Acciones y ETFs',
+        rentaFija: 'Renta Fija',
+        inmobiliaria: 'Inmobiliaria',
+        pensiones: 'Planes de Pensiones'
+      };
+
+      const incomeTypes = {
+        salary: 'Nómina',
+        rent: 'Alquiler',
+        business: 'Negocio',
+        dividends: 'Dividendos',
+        pension: 'Pensión',
+        other: 'Otros'
+      };
+
+      const expenseCategories = {
+        housing: 'Vivienda',
+        utilities: 'Suministros',
+        food: 'Alimentación',
+        education: 'Educación',
+        leisure: 'Ocio',
+        clothing: 'Ropa',
+        transport: 'Transporte',
+        health: 'Salud',
+        other: 'Otros'
+      };
+
+      const debtTypes = {
+        mortgage: 'Hipoteca',
+        personal: 'Préstamo Personal',
+        car: 'Préstamo Vehículo',
+        other: 'Otros'
+      };
+
+      const addIncome = () => {
+        if (!newIncome.name || !newIncome.amount) {
+          alert('Completa todos los campos');
+          return;
+        }
+        setIncomes([...incomes, { ...newIncome, id: Date.now(), amount: parseFormattedNumber(newIncome.amount) }]);
+        setNewIncome({ name: '', type: 'salary', amount: '' });
+        setShowModal(false);
+      };
+
+      const addExpense = () => {
+        if (!newExpense.name || !newExpense.amount) {
+          alert('Completa todos los campos');
+          return;
+        }
+        setExpenses([...expenses, { ...newExpense, id: Date.now(), amount: parseFormattedNumber(newExpense.amount) }]);
+        setNewExpense({ name: '', category: 'housing', amount: '' });
+        setShowModal(false);
+      };
+
+      const addDebt = () => {
+        if (!newDebt.name || !newDebt.amount || !newDebt.tae) {
+          alert('Completa todos los campos');
+          return;
+        }
+        setDebts([...debts, { ...newDebt, id: Date.now(), amount: parseFormattedNumber(newDebt.amount), tae: parseFloat(newDebt.tae) }]);
+        setNewDebt({ name: '', type: 'mortgage', amount: '', tae: '' });
+        setShowModal(false);
+      };
+
+      const addLiquidAccount = () => {
+        if (!newLiquidAccount.name || !newLiquidAccount.amount) {
+          alert('Completa al menos el nombre y el importe');
+          return;
+        }
+        setLiquidAccounts([...liquidAccounts, { 
+          ...newLiquidAccount, 
+          id: Date.now(), 
+          amount: parseFormattedNumber(newLiquidAccount.amount),
+          interest: parseFloat(newLiquidAccount.interest) || 0
+        }]);
+        setNewLiquidAccount({ name: '', bank: '', amount: '', interest: '', isEmergency: false });
+        setShowModal(false);
+      };
+
+      const addInvestment = () => {
+        if (!newInvestment.name || !newInvestment.amount) {
+          alert('Completa el nombre y el importe');
+          return;
+        }
+        setInvestments([...investments, { 
+          ...newInvestment, 
+          id: Date.now(), 
+          amount: parseFormattedNumber(newInvestment.amount),
+          expectedReturn: parseFloat(newInvestment.expectedReturn) || 0
+        }]);
+        setNewInvestment({ name: '', category: 'fondosIndexados', amount: '', expectedReturn: '', notes: '' });
+        setShowModal(false);
+      };
+
+      const deleteItem = (id, type) => {
+        if (!confirm('¿Eliminar este elemento?')) return;
+        
+        switch(type) {
+          case 'income':
+            setIncomes(incomes.filter(item => item.id !== id));
+            break;
+          case 'expense':
+            setExpenses(expenses.filter(item => item.id !== id));
+            break;
+          case 'debt':
+            setDebts(debts.filter(item => item.id !== id));
+            break;
+          case 'liquid':
+            setLiquidAccounts(liquidAccounts.filter(item => item.id !== id));
+            break;
+          case 'investment':
+            setInvestments(investments.filter(item => item.id !== id));
+            break;
+        }
+      };
+
+      const calculateTotals = () => {
+        const totalIncome = incomes.reduce((sum, inc) => sum + inc.amount, 0);
+        const totalExpenses = expenses.reduce((sum, exp) => sum + exp.amount, 0);
+        const totalDebts = debts.reduce((sum, debt) => sum + debt.amount, 0);
+        const totalLiquid = liquidAccounts.reduce((sum, acc) => sum + acc.amount, 0);
+        const emergencyFund = liquidAccounts.filter(acc => acc.isEmergency).reduce((sum, acc) => sum + acc.amount, 0);
+        const totalInvestments = investments.reduce((sum, inv) => sum + inv.amount, 0);
+        const totalCredits = parseFormattedNumber(credits.shortTerm) + 
+                            parseFormattedNumber(credits.mediumTerm) + 
+                            parseFormattedNumber(credits.longTerm);
+        
+        const totalCapital = totalLiquid + totalInvestments;
+        const netWorth = totalCapital - totalDebts + totalCredits;
+        const savingsRate = totalIncome > 0 ? ((totalIncome - totalExpenses) / totalIncome) * 100 : 0;
+
+        return {
+          totalIncome,
+          totalExpenses,
+          totalDebts,
+          totalLiquid,
+          emergencyFund,
+          totalInvestments,
+          totalCredits,
+          totalCapital,
+          netWorth,
+          savingsRate
+        };
+      };
+
+      const totals = calculateTotals();
+
+      const getSavingsRating = (rate) => {
+        if (rate >= 30) return { label: 'Excelente', class: 'success' };
+        if (rate >= 20) return { label: 'Óptima', class: 'success' };
+        if (rate >= 10) return { label: 'Mejorable', class: 'warning' };
+        return { label: 'Insuficiente', class: 'danger' };
+      };
+
+      const savingsRating = getSavingsRating(totals.savingsRate);
+      const passwordStrength = checkPasswordStrength(password);
+      const strengthColors = ['#ef4444', '#f59e0b', '#f59e0b', '#10b981', '#10b981'];
+      const strengthLabels = ['Muy débil', 'Débil', 'Media', 'Fuerte', 'Muy fuerte'];
+
+      if (!isAuthenticated) {
+        return (
+          <>
+            {showInstallBanner && !localStorage.getItem('installPromptDismissed') && (
+              <InstallPrompt onInstall={handleInstall} onDismiss={handleDismissInstall} />
+            )}
+            
+            <div className="login-container">
+              <div className="login-card">
+                <div className="login-header">
+                  <div className="login-icon">💼</div>
+                  <h1 className="login-title">Finanzas Personal Pro</h1>
+                  <p className="login-subtitle">Gestión segura de tu economía</p>
+                </div>
+
+                {error && (
+                  <div className="alert alert-error">
+                    ⚠️ {error}
+                  </div>
+                )}
+
+                {success && (
+                  <div className="alert alert-success">
+                    ✓ {success}
+                  </div>
+                )}
+
+                {authScreen === 'login' && (
+                  <>
+                    <div className="form-group">
+                      <label className="form-label">Email</label>
+                      <input
+                        type="email"
+                        className="form-input"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="tu@email.com"
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label className="form-label">Contraseña</label>
+                      <div className="password-toggle">
+                        <input
+                          type={showPassword ? 'text' : 'password'}
+                          className="form-input"
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
+                          placeholder="••••••••"
+                        />
+                        <button
+                          className="password-toggle-btn"
+                          onClick={() => setShowPassword(!showPassword)}
+                        >
+                          {showPassword ? '👁️' : '👁️‍🗨️'}
+                        </button>
+                      </div>
+                    </div>
+
+                    <button className="btn btn-primary" onClick={handleLogin} disabled={loading}>
+                      {loading ? <div className="spinner"></div> : 'Iniciar Sesión'}
+                    </button>
+
+                    <div className="divider">
+                      <span>o</span>
+                    </div>
+
+                    <button className="btn btn-secondary" onClick={() => setAuthScreen('register')}>
+                      Crear cuenta nueva
+                    </button>
+                  </>
+                )}
+
+                {authScreen === 'register' && (
+                  <>
+                    <div className="form-group">
+                      <label className="form-label">Email</label>
+                      <input
+                        type="email"
+                        className="form-input"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="tu@email.com"
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label className="form-label">Contraseña</label>
+                      <div className="password-toggle">
+                        <input
+                          type={showPassword ? 'text' : 'password'}
+                          className="form-input"
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
+                          placeholder="••••••••"
+                        />
+                        <button
+                          className="password-toggle-btn"
+                          onClick={() => setShowPassword(!showPassword)}
+                        >
+                          {showPassword ? '👁️' : '👁️‍🗨️'}
+                        </button>
+                      </div>
+                      {password && (
+                        <div className="password-strength">
+                          <div style={{fontSize: '0.8rem', marginBottom: '0.25rem'}}>
+                            {strengthLabels[passwordStrength]}
+                          </div>
+                          <div className="strength-bar">
+                            <div 
+                              className="strength-fill"
+                              style={{
+                                width: `${(passwordStrength / 5) * 100}%`,
+                                background: strengthColors[passwordStrength]
+                              }}
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="form-group">
+                      <label className="form-label">Confirmar contraseña</label>
+                      <input
+                        type={showPassword ? 'text' : 'password'}
+                        className="form-input"
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                        placeholder="••••••••"
+                      />
+                    </div>
+
+                    <label className="checkbox-label">
+                      <input
+                        type="checkbox"
+                        checked={twoFactorEnabled}
+                        onChange={(e) => setTwoFactorEnabled(e.target.checked)}
+                      />
+                      Habilitar verificación en dos pasos
+                    </label>
+
+                    <button className="btn btn-primary" onClick={handleRegister} style={{marginTop: '1rem'}}>
+                      Registrarse
+                    </button>
+
+                    <button className="btn btn-link" onClick={() => setAuthScreen('login')}>
+                      Ya tengo cuenta
+                    </button>
+                  </>
+                )}
+
+                {(authScreen === 'verify' || authScreen === 'verify-login') && (
+                  <>
+                    <div className="alert alert-info">
+                      📧 Hemos enviado un código de 4 dígitos a {email}
+                    </div>
+
+                    <div className="verification-code">
+                      {verificationCode.map((digit, index) => (
+                        <input
+                          key={index}
+                          ref={el => verificationInputs.current[index] = el}
+                          type="text"
+                          inputMode="numeric"
+                          maxLength="1"
+                          className="verification-input"
+                          value={digit}
+                          onChange={(e) => handleVerificationInput(index, e.target.value)}
+                          onKeyDown={(e) => handleVerificationKeyDown(index, e)}
+                        />
+                      ))}
+                    </div>
+
+                    <button 
+                      className="btn btn-primary" 
+                      onClick={authScreen === 'verify' ? handleVerification : () => {
+                        const enteredCode = verificationCode.join('');
+                        if (enteredCode === generatedCode) {
+                          completeLogin();
+                        } else {
+                          setError('Código incorrecto');
+                        }
+                      }}
+                      disabled={verificationCode.some(d => !d)}
+                    >
+                      Verificar
+                    </button>
+
+                    <div className="resend-code">
+                      ¿No recibiste el código?{' '}
+                      <button onClick={resendCode}>Reenviar</button>
+                    </div>
+
+                    <button className="btn btn-link" onClick={() => {
+                      setAuthScreen(authScreen === 'verify' ? 'register' : 'login');
+                      setVerificationCode(['', '', '', '']);
+                    }}>
+                      Volver
+                    </button>
+                  </>
+                )}
+              </div>
+            </div>
+          </>
+        );
+      }
+
+      return (
+        <>
+          {showInstallBanner && !localStorage.getItem('installPromptDismissed') && (
+            <InstallPrompt onInstall={handleInstall} onDismiss={handleDismissInstall} />
+          )}
+
+          <div className="app-container">
+            <div className="app-header">
+              <div className="header-content">
+                <div className="app-title">💼 Finanzas Pro</div>
+                <button className="logout-btn" onClick={handleLogout}>
+                  Salir
+                </button>
+              </div>
+            </div>
+
+            <div className="main-content">
+              <div className="tabs">
+                <button className={`tab ${activeTab === 'resumen' ? 'active' : ''}`} onClick={() => setActiveTab('resumen')}>
+                  📊<br/>Resumen
+                </button>
+                <button className={`tab ${activeTab === 'ingresos' ? 'active' : ''}`} onClick={() => setActiveTab('ingresos')}>
+                  💰<br/>Ingresos
+                </button>
+                <button className={`tab ${activeTab === 'gastos' ? 'active' : ''}`} onClick={() => setActiveTab('gastos')}>
+                  💳<br/>Gastos
+                </button>
+                <button className={`tab ${activeTab === 'deudas' ? 'active' : ''}`} onClick={() => setActiveTab('deudas')}>
+                  📉<br/>Deudas
+                </button>
+                <button className={`tab ${activeTab === 'liquido' ? 'active' : ''}`} onClick={() => setActiveTab('liquido')}>
+                  🏦<br/>Líquido
+                </button>
+                <button className={`tab ${activeTab === 'inversiones' ? 'active' : ''}`} onClick={() => setActiveTab('inversiones')}>
+                  📈<br/>Inversiones
+                </button>
+                <button className={`tab ${activeTab === 'creditos' ? 'active' : ''}`} onClick={() => setActiveTab('creditos')}>
+                  💵<br/>Créditos
+                </button>
+                <button className={`tab ${activeTab === 'perfil' ? 'active' : ''}`} onClick={() => setActiveTab('perfil')}>
+                  👤<br/>Perfil
+                </button>
+              </div>
+
+              {activeTab === 'resumen' && (
+                <div className="section">
+                  <h2 className="section-title">📊 Resumen Financiero</h2>
+                  
+                  <div className="summary-grid">
+                    <div className="summary-card">
+                      <div className="summary-label">Patrimonio Neto</div>
+                      <div className="summary-value">{formatNumber(totals.netWorth)}€</div>
+                      <div className="summary-subtitle">
+                        Capital {formatNumber(totals.totalCapital)}€
+                      </div>
+                    </div>
+                    <div className="summary-card" style={{background: savingsRating.class === 'success' ? 'linear-gradient(135deg, #10b981, #059669)' : savingsRating.class === 'warning' ? 'linear-gradient(135deg, #f59e0b, #d97706)' : 'linear-gradient(135deg, #ef4444, #dc2626)'}}>
+                      <div className="summary-label">Tasa de Ahorro</div>
+                      <div className="summary-value">{totals.savingsRate.toFixed(1)}%</div>
+                      <div className="summary-subtitle">{savingsRating.label}</div>
+                    </div>
+                    <div className="summary-card" style={{background: 'linear-gradient(135deg, #10b981, #059669)'}}>
+                      <div className="summary-label">Ingresos</div>
+                      <div className="summary-value">{formatNumber(totals.totalIncome)}€</div>
+                    </div>
+                    <div className="summary-card" style={{background: 'linear-gradient(135deg, #ef4444, #dc2626)'}}>
+                      <div className="summary-label">Gastos</div>
+                      <div className="summary-value">{formatNumber(totals.totalExpenses)}€</div>
+                    </div>
+                    <div className="summary-card" style={{background: 'linear-gradient(135deg, #8b5cf6, #7c3aed)'}}>
+                      <div className="summary-label">Inversiones</div>
+                      <div className="summary-value">{formatNumber(totals.totalInvestments)}€</div>
+                    </div>
+                    <div className="summary-card" style={{background: 'linear-gradient(135deg, #06b6d4, #0891b2)'}}>
+                      <div className="summary-label">Líquido</div>
+                      <div className="summary-value">{formatNumber(totals.totalLiquid)}€</div>
+                    </div>
+                  </div>
+
+                  <div className="card">
+                    <div className="card-title">Balance Mensual</div>
+                    <div className="card-value" style={{color: totals.totalIncome - totals.totalExpenses > 0 ? 'var(--success)' : 'var(--danger)'}}>
+                      {totals.totalIncome - totals.totalExpenses > 0 ? '+' : ''}{formatNumber(totals.totalIncome - totals.totalExpenses)}€
+                    </div>
+                    <div style={{fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: '0.5rem'}}>
+                      {totals.totalIncome - totals.totalExpenses > 0 ? 'Superávit' : 'Déficit'} mensual
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'ingresos' && (
+                <div className="section">
+                  <h2 className="section-title">💰 Ingresos</h2>
+                  
+                  <div className="card">
+                    <div className="card-title">Total Mensual</div>
+                    <div className="card-value">{formatNumber(totals.totalIncome)}€</div>
+                  </div>
+
+                  {incomes.length === 0 ? (
+                    <div className="empty-state">
+                      <div className="empty-icon">💰</div>
+                      <p>No hay ingresos registrados</p>
+                    </div>
+                  ) : (
+                    <div className="item-list">
+                      {incomes.map(income => (
+                        <div key={income.id} className="item">
+                          <div className="item-info">
+                            <div className="item-name">{income.name}</div>
+                            <div className="item-meta">{incomeTypes[income.type]}</div>
+                          </div>
+                          <div>
+                            <div className="item-amount" style={{color: 'var(--success)'}}>{formatNumber(income.amount)}€</div>
+                            <button className="btn-icon" onClick={() => deleteItem(income.id, 'income')} style={{marginTop: '0.25rem'}}>🗑️</button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <button className="fab" onClick={() => {
+                    setModalType('income');
+                    setShowModal(true);
+                  }}>
+                    +
+                  </button>
+                </div>
+              )}
+
+              {activeTab === 'gastos' && (
+                <div className="section">
+                  <h2 className="section-title">💳 Gastos</h2>
+                  
+                  <div className="card">
+                    <div className="card-title">Total Mensual</div>
+                    <div className="card-value" style={{color: 'var(--danger)'}}>{formatNumber(totals.totalExpenses)}€</div>
+                  </div>
+
+                  {expenses.length === 0 ? (
+                    <div className="empty-state">
+                      <div className="empty-icon">💳</div>
+                      <p>No hay gastos registrados</p>
+                    </div>
+                  ) : (
+                    <div className="item-list">
+                      {expenses.map(expense => (
+                        <div key={expense.id} className="item">
+                          <div className="item-info">
+                            <div className="item-name">{expense.name}</div>
+                            <div className="item-meta">{expenseCategories[expense.category]}</div>
+                          </div>
+                          <div>
+                            <div className="item-amount" style={{color: 'var(--danger)'}}>{formatNumber(expense.amount)}€</div>
+                            <button className="btn-icon" onClick={() => deleteItem(expense.id, 'expense')} style={{marginTop: '0.25rem'}}>🗑️</button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <button className="fab" onClick={() => {
+                    setModalType('expense');
+                    setShowModal(true);
+                  }}>
+                    +
+                  </button>
+                </div>
+              )}
+
+              {activeTab === 'deudas' && (
+                <div className="section">
+                  <h2 className="section-title">📉 Deudas</h2>
+                  
+                  <div className="card">
+                    <div className="card-title">Total Deudas</div>
+                    <div className="card-value" style={{color: 'var(--danger)'}}>{formatNumber(totals.totalDebts)}€</div>
+                  </div>
+
+                  {debts.length === 0 ? (
+                    <div className="empty-state">
+                      <div className="empty-icon">📉</div>
+                      <p>No hay deudas registradas</p>
+                    </div>
+                  ) : (
+                    <div className="item-list">
+                      {debts.map(debt => (
+                        <div key={debt.id} className="item">
+                          <div className="item-info">
+                            <div className="item-name">{debt.name}</div>
+                            <div className="item-meta">{debtTypes[debt.type]} - TAE {debt.tae}%</div>
+                          </div>
+                          <div>
+                            <div className="item-amount" style={{color: 'var(--danger)'}}>{formatNumber(debt.amount)}€</div>
+                            <button className="btn-icon" onClick={() => deleteItem(debt.id, 'debt')} style={{marginTop: '0.25rem'}}>🗑️</button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <button className="fab" onClick={() => {
+                    setModalType('debt');
+                    setShowModal(true);
+                  }}>
+                    +
+                  </button>
+                </div>
+              )}
+
+              {activeTab === 'liquido' && (
+                <div className="section">
+                  <h2 className="section-title">🏦 Capital Líquido</h2>
+                  
+                  <div className="summary-grid">
+                    <div className="summary-card" style={{background: 'linear-gradient(135deg, #06b6d4, #0891b2)'}}>
+                      <div className="summary-label">Total</div>
+                      <div className="summary-value">{formatNumber(totals.totalLiquid)}€</div>
+                    </div>
+                    <div className="summary-card" style={{background: 'linear-gradient(135deg, #10b981, #059669)'}}>
+                      <div className="summary-label">Emergencia</div>
+                      <div className="summary-value">{formatNumber(totals.emergencyFund)}€</div>
+                    </div>
+                  </div>
+
+                  {liquidAccounts.length === 0 ? (
+                    <div className="empty-state">
+                      <div className="empty-icon">🏦</div>
+                      <p>No hay cuentas registradas</p>
+                    </div>
+                  ) : (
+                    <div className="item-list">
+                      {liquidAccounts.map(acc => (
+                        <div key={acc.id} className="item">
+                          <div className="item-info">
+                            <div className="item-name">{acc.name} {acc.isEmergency && '🛡️'}</div>
+                            <div className="item-meta">{acc.bank || 'Sin banco'} - {acc.interest}%</div>
+                          </div>
+                          <div>
+                            <div className="item-amount">{formatNumber(acc.amount)}€</div>
+                            <button className="btn-icon" onClick={() => deleteItem(acc.id, 'liquid')} style={{marginTop: '0.25rem'}}>🗑️</button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <button className="fab" onClick={() => {
+                    setModalType('liquid');
+                    setShowModal(true);
+                  }}>
+                    +
+                  </button>
+                </div>
+              )}
+
+              {activeTab === 'inversiones' && (
+                <div className="section">
+                  <h2 className="section-title">📈 Inversiones</h2>
+                  
+                  <div className="card">
+                    <div className="card-title">Total Invertido</div>
+                    <div className="card-value">{formatNumber(totals.totalInvestments)}€</div>
+                  </div>
+
+                  {investments.length === 0 ? (
+                    <div className="empty-state">
+                      <div className="empty-icon">📈</div>
+                      <p>No hay inversiones registradas</p>
+                    </div>
+                  ) : (
+                    <div className="item-list">
+                      {investments.map(inv => (
+                        <div key={inv.id} className="item">
+                          <div className="item-info">
+                            <div className="item-name">{inv.name}</div>
+                            <div className="item-meta">{categories[inv.category]} - {inv.expectedReturn}% anual</div>
+                          </div>
+                          <div>
+                            <div className="item-amount">{formatNumber(inv.amount)}€</div>
+                            <button className="btn-icon" onClick={() => deleteItem(inv.id, 'investment')} style={{marginTop: '0.25rem'}}>🗑️</button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <button className="fab" onClick={() => {
+                    setModalType('investment');
+                    setShowModal(true);
+                  }}>
+                    +
+                  </button>
+                </div>
+              )}
+
+              {activeTab === 'creditos' && (
+                <div className="section">
+                  <h2 className="section-title">💵 Créditos a Favor</h2>
+                  
+                  <div className="form-group">
+                    <label className="form-label">Corto Plazo (&lt; 1 año)</label>
+                    <input
+                      type="text"
+                      className="form-input"
+                      value={credits.shortTerm}
+                      onChange={(e) => setCredits({...credits, shortTerm: e.target.value})}
+                      placeholder="5.000"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Medio Plazo (1-3 años)</label>
+                    <input
+                      type="text"
+                      className="form-input"
+                      value={credits.mediumTerm}
+                      onChange={(e) => setCredits({...credits, mediumTerm: e.target.value})}
+                      placeholder="8.000"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Largo Plazo (&gt; 3 años)</label>
+                    <input
+                      type="text"
+                      className="form-input"
+                      value={credits.longTerm}
+                      onChange={(e) => setCredits({...credits, longTerm: e.target.value})}
+                      placeholder="12.000"
+                    />
+                  </div>
+
+                  <div className="card" style={{marginTop: '1.5rem'}}>
+                    <div className="card-title">Total Créditos</div>
+                    <div className="card-value" style={{color: 'var(--success)'}}>{formatNumber(totals.totalCredits)}€</div>
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'perfil' && (
+                <div className="section">
+                  <h2 className="section-title">👤 Perfil</h2>
+                  
+                  <div className="form-group">
+                    <label className="form-label">Edad</label>
+                    <input
+                      type="number"
+                      className="form-input"
+                      value={profile.age}
+                      onChange={(e) => setProfile({...profile, age: e.target.value})}
+                      placeholder="35"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Número de hijos</label>
+                    <input
+                      type="number"
+                      className="form-input"
+                      value={profile.children}
+                      onChange={(e) => setProfile({...profile, children: e.target.value})}
+                      placeholder="2"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label className="form-label">Perfil de Riesgo</label>
+                    <select
+                      className="form-input"
+                      value={profile.riskAversion}
+                      onChange={(e) => setProfile({...profile, riskAversion: e.target.value})}
+                    >
+                      <option value="low">Conservador</option>
+                      <option value="moderate">Moderado</option>
+                      <option value="high">Agresivo</option>
+                    </select>
+                  </div>
+
+                  <div style={{marginTop: '2rem', padding: '1rem', background: 'var(--bg-secondary)', borderRadius: '12px'}}>
+                    <div style={{fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '0.5rem'}}>
+                      Usuario: {currentUser?.email}
+                    </div>
+                    <div style={{fontSize: '0.85rem', color: 'var(--text-secondary)'}}>
+                      Último acceso: {new Date(currentUser?.loginTime).toLocaleString('es-ES')}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {showModal && (
+              <div className="modal" onClick={() => setShowModal(false)}>
+                <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                  <div className="modal-header">
+                    <h3 className="modal-title">
+                      {modalType === 'income' && '💰 Nuevo Ingreso'}
+                      {modalType === 'expense' && '💳 Nuevo Gasto'}
+                      {modalType === 'debt' && '📉 Nueva Deuda'}
+                      {modalType === 'liquid' && '🏦 Nueva Cuenta'}
+                      {modalType === 'investment' && '📈 Nueva Inversión'}
+                    </h3>
+                    <button className="close-btn" onClick={() => setShowModal(false)}>×</button>
+                  </div>
+
+                  {modalType === 'income' && (
+                    <>
+                      <div className="form-group">
+                        <label className="form-label">Concepto</label>
+                        <input
+                          type="text"
+                          className="form-input"
+                          value={newIncome.name}
+                          onChange={(e) => setNewIncome({...newIncome, name: e.target.value})}
+                          placeholder="Nómina empresa"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label">Tipo</label>
+                        <select
+                          className="form-input"
+                          value={newIncome.type}
+                          onChange={(e) => setNewIncome({...newIncome, type: e.target.value})}
+                        >
+                          {Object.keys(incomeTypes).map(key => (
+                            <option key={key} value={key}>{incomeTypes[key]}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label">Importe (€)</label>
+                        <input
+                          type="text"
+                          className="form-input"
+                          value={newIncome.amount}
+                          onChange={(e) => setNewIncome({...newIncome, amount: e.target.value})}
+                          placeholder="3.000"
+                        />
+                      </div>
+                      <button className="btn btn-primary" onClick={addIncome}>Añadir</button>
+                    </>
+                  )}
+
+                  {modalType === 'expense' && (
+                    <>
+                      <div className="form-group">
+                        <label className="form-label">Concepto</label>
+                        <input
+                          type="text"
+                          className="form-input"
+                          value={newExpense.name}
+                          onChange={(e) => setNewExpense({...newExpense, name: e.target.value})}
+                          placeholder="Hipoteca"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label">Categoría</label>
+                        <select
+                          className="form-input"
+                          value={newExpense.category}
+                          onChange={(e) => setNewExpense({...newExpense, category: e.target.value})}
+                        >
+                          {Object.keys(expenseCategories).map(key => (
+                            <option key={key} value={key}>{expenseCategories[key]}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label">Importe (€)</label>
+                        <input
+                          type="text"
+                          className="form-input"
+                          value={newExpense.amount}
+                          onChange={(e) => setNewExpense({...newExpense, amount: e.target.value})}
+                          placeholder="800"
+                        />
+                      </div>
+                      <button className="btn btn-primary" onClick={addExpense}>Añadir</button>
+                    </>
+                  )}
+
+                  {modalType === 'debt' && (
+                    <>
+                      <div className="form-group">
+                        <label className="form-label">Concepto</label>
+                        <input
+                          type="text"
+                          className="form-input"
+                          value={newDebt.name}
+                          onChange={(e) => setNewDebt({...newDebt, name: e.target.value})}
+                          placeholder="Hipoteca vivienda"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label">Tipo</label>
+                        <select
+                          className="form-input"
+                          value={newDebt.type}
+                          onChange={(e) => setNewDebt({...newDebt, type: e.target.value})}
+                        >
+                          {Object.keys(debtTypes).map(key => (
+                            <option key={key} value={key}>{debtTypes[key]}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label">Importe (€)</label>
+                        <input
+                          type="text"
+                          className="form-input"
+                          value={newDebt.amount}
+                          onChange={(e) => setNewDebt({...newDebt, amount: e.target.value})}
+                          placeholder="150.000"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label">TAE (%)</label>
+                        <input
+                          type="number"
+                          step="0.01"
+                          className="form-input"
+                          value={newDebt.tae}
+                          onChange={(e) => setNewDebt({...newDebt, tae: e.target.value})}
+                          placeholder="2.5"
+                        />
+                      </div>
+                      <button className="btn btn-primary" onClick={addDebt}>Añadir</button>
+                    </>
+                  )}
+
+                  {modalType === 'liquid' && (
+                    <>
+                      <div className="form-group">
+                        <label className="form-label">Nombre</label>
+                        <input
+                          type="text"
+                          className="form-input"
+                          value={newLiquidAccount.name}
+                          onChange={(e) => setNewLiquidAccount({...newLiquidAccount, name: e.target.value})}
+                          placeholder="Cuenta ING"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label">Banco</label>
+                        <input
+                          type="text"
+                          className="form-input"
+                          value={newLiquidAccount.bank}
+                          onChange={(e) => setNewLiquidAccount({...newLiquidAccount, bank: e.target.value})}
+                          placeholder="ING"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label">Importe (€)</label>
+                        <input
+                          type="text"
+                          className="form-input"
+                          value={newLiquidAccount.amount}
+                          onChange={(e) => setNewLiquidAccount({...newLiquidAccount, amount: e.target.value})}
+                          placeholder="12.000"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label">Interés (%)</label>
+                        <input
+                          type="number"
+                          step="0.01"
+                          className="form-input"
+                          value={newLiquidAccount.interest}
+                          onChange={(e) => setNewLiquidAccount({...newLiquidAccount, interest: e.target.value})}
+                          placeholder="1.5"
+                        />
+                      </div>
+                      <label className="checkbox-label">
+                        <input
+                          type="checkbox"
+                          checked={newLiquidAccount.isEmergency}
+                          onChange={(e) => setNewLiquidAccount({...newLiquidAccount, isEmergency: e.target.checked})}
+                        />
+                        Fondo de emergencia
+                      </label>
+                      <button className="btn btn-primary" onClick={addLiquidAccount} style={{marginTop: '1rem'}}>Añadir</button>
+                    </>
+                  )}
+
+                  {modalType === 'investment' && (
+                    <>
+                      <div className="form-group">
+                        <label className="form-label">Nombre</label>
+                        <input
+                          type="text"
+                          className="form-input"
+                          value={newInvestment.name}
+                          onChange={(e) => setNewInvestment({...newInvestment, name: e.target.value})}
+                          placeholder="Vanguard Global"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label">Categoría</label>
+                        <select
+                          className="form-input"
+                          value={newInvestment.category}
+                          onChange={(e) => setNewInvestment({...newInvestment, category: e.target.value})}
+                        >
+                          {Object.keys(categories).map(key => (
+                            <option key={key} value={key}>{categories[key]}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label">Importe (€)</label>
+                        <input
+                          type="text"
+                          className="form-input"
+                          value={newInvestment.amount}
+                          onChange={(e) => setNewInvestment({...newInvestment, amount: e.target.value})}
+                          placeholder="25.000"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label">Rentabilidad anual (%)</label>
+                        <input
+                          type="number"
+                          step="0.01"
+                          className="form-input"
+                          value={newInvestment.expectedReturn}
+                          onChange={(e) => setNewInvestment({...newInvestment, expectedReturn: e.target.value})}
+                          placeholder="7.5"
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label className="form-label">Notas</label>
+                        <input
+                          type="text"
+                          className="form-input"
+                          value={newInvestment.notes}
+                          onChange={(e) => setNewInvestment({...newInvestment, notes: e.target.value})}
+                          placeholder="Ampliar mensualmente"
+                        />
+                      </div>
+                      <button className="btn btn-primary" onClick={addInvestment}>Añadir</button>
+                    </>
+                  )}
+                </div>
+              </div>
+            )}
+
+            <div className="bottom-nav">
+              <button className={`nav-item ${activeTab === 'resumen' ? 'active' : ''}`} onClick={() => setActiveTab('resumen')}>
+                <div className="nav-icon">📊</div>
+                Resumen
+              </button>
+              <button className={`nav-item ${activeTab === 'ingresos' || activeTab === 'gastos' ? 'active' : ''}`} onClick={() => setActiveTab('ingresos')}>
+                <div className="nav-icon">💰</div>
+                Finanzas
+              </button>
+              <button className={`nav-item ${activeTab === 'liquido' || activeTab === 'inversiones' ? 'active' : ''}`} onClick={() => setActiveTab('inversiones')}>
+                <div className="nav-icon">📈</div>
+                Patrimonio
+              </button>
+              <button className={`nav-item ${activeTab === 'perfil' ? 'active' : ''}`} onClick={() => setActiveTab('perfil')}>
+                <div className="nav-icon">👤</div>
+                Perfil
+              </button>
+            </div>
+          </div>
+        </>
+      );
+    };
+
+    ReactDOM.render(<FinanceApp />, document.getElementById('root'));
+  </script>
+</body>
+</html>
